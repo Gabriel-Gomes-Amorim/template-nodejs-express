@@ -6,9 +6,9 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_DB: ${DB_DATABASE}
+      - POSTGRES_PASSWORD=setupDev
+      - POSTGRES_USER=setup
+      - POSTGRES_DB=setup
     ports:
       - "5432:5432"
     #volumes:
